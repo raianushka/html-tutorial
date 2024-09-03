@@ -1,0 +1,22 @@
+<script src='jquery-3.6.0.min.js'>
+</script>
+<script>
+$(document).ready(()=>{
+$("#name").keyup(()=>{
+let nm=$("#name").val()
+//alert(nm)
+if(nm.length<3){
+$("#name").css("color","red")
+$("#name").css("background","yellow")
+}
+else{
+$("#name").css("color","green")
+$("#name").css("background","orange")
+}
+})
+})
+</script>
+ 
+<input type='text' id='name'placeholder='name'/><div/>
+<input type='submit' id='save' value='show'/>
+<h1 id='name'></h1>

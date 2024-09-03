@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Registration Page </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style2.css">
+    </head>
+
+    
+      
+    <body>
+        <div class="full-page">
+            <div class="navbar">
+                <div>
+                    <h2>AROUND THE GLOBE</h2>
+                </div>
+                <nav>
+                    <ul id="Menu Items">
+                        <li><button class="loginbtn" id="toggle-btn" onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                        <li><button class="registerbtn"id="toggle-btn" onclick="document.getElementById('register-form').style.diplay='block'" style="width:auto;">Register</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="login-page" id="login-form">
+                <div class="form-box">
+                    <form id="login" class="input-group-login">
+                        <input type="email" class="input-field" placeholder="Enter your Email" id="Loginemail" required/>
+                        <input type="password" class="input-field" placeholder="Enter your password" id="Loginpass" required/>
+                        <input type="checkbox" class="check-box" ><span>Remember Password</span>
+                        <button type="submit" class="submit-btn" onclick="logi_n()">Login</button>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="full-page>">
+                <div class="register-page" id="register-form">
+                    <div class="form-box">
+                    <form id="register" >
+                        <input type="text" class="input-field" placeholder="Name" id="name" required>
+                        <input type="email" class="input-field" placeholder="Email" id="email" required>
+                        <input type="text" class="input-field" placeholder="Phone number" id="pnumber">
+                        <input type="password" class="input-field" placeholder="Create a password" id="pwd">
+                        <input type="password" class="input-field" placeholder="Confirm password" id="p2">
+                        <input type="checkbox" class="checkbox"><span>I agree to all the terms and conditions</span>
+                        <button type="submit" class="submit-btn" onclick="name_info(),pnumbe_r(), emai_l(), pass_d()">Register</button>
+                        
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+
+        
+        
+    </body>
+
+  
+</html>
+

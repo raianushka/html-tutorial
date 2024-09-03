@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+<style>
+    .order{
+        display:grid;
+        grid-template-columns: 200px 200px 200px;
+        column-gap: 15px;
+    }
+    .container2 {
+            font-family: Arial;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+            margin-left: 10px;
+        }
+
+        .title1 {
+            margin-top: 2px;
+            margin-bottom: 0px;
+            margin-left: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .price1 {
+            margin-top: 0px;
+            margin-left: 5px;
+            font-size: 15px;
+        }
+
+        .btn {
+            margin-left: 5px;
+            margin-bottom: 5px;
+            background-color: rgb(132, 76, 185);
+            border: none;
+            border-radius: 5px;
+            color: rgb(254, 254, 254);
+            padding: 5px 5px 5px 5px;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+        }
+        .img{
+            width:100%;
+            height:150px;
+        }
+        </style>
+
+    <title>Exercise 11- CSS Grid</title>
+</head>
+<body>
+    <p>11a. Create a grid with 2 columns with widths of 200px and 75px</p>
+    <div style="display: grid;
+    grid-template-columns: 200px 75px;">
+    <div style="width:200px;
+    background-color: lightblue;"
+    >200px</div>
+    <div style="width:75px; background-color:lightcoral">75px</div>
+</div>
+
+<p>11b. Create a grid with 3 columns with widths of 200px | remaining space | 75px</p>
+    <div style="display: grid;
+    grid-template-columns: 200px 1fr 75px;">
+    <div style="
+    background-color: lightblue;"
+    >200px</div>
+    <div style=" background-color:lightcoral">75px</div>
+    <div style="width:75px;
+    background-color: lightblue;"
+    >75px</div>
+</div>
+
+<p>11b. Create a grid with 4 equal columns that take up entire page of 200px | remaining space | 75px</p>
+    <div style="display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 10px;">
+    <div style="background-color: lightblue;">col1</div>
+    <div style="background-color: lightblue;">col2</div>
+    <div style="background-color: lightblue;">col3</div>
+    <div style="background-color: lightblue;">col4</div>
+    <div style="background-color: lightblue;">col5</div>
+    <div style="background-color: lightblue;">col6</div>
+    <div style="background-color: lightblue;">col7</div>
+    <div style="background-color: lightblue;">col8</div>
+</div>
+
+<p>11d. continuing from exercise 10e create this design using css grid</p>
+<ul>
+    <li>Create a grid with 3 columns and put the elements into the grid</li>
+    <li>Replace any uses of display: inline-block </li>
+    <li>to align elements vertically in a grid, use align-items:center;</li>
+</ul>
+
+<div class="order">
+    <div class="container2">
+        <img src="/htmltutuorial/intro to html-css/thumbnails/87930581.webp" class="img">
+        <p class="title1">Pizza</p>
+        <p class="price1">&#8377;120</p>
+        <button class="btn">Order Now</button>
+    </div>
+    <div class="container2">
+        <img src="/htmltutuorial/intro to html-css/thumbnails/chicken-momo-1.jpg" class="img">
+        <p class="title1">Momos</p>
+        <p class="price1">&#8377;90</p>
+        <button class="btn">Order Now</button>
+    </div>
+    <div class="container2">
+        <img src="/htmltutuorial/intro to html-css\thumbnails/download.jpg" class="img">
+        <p class="title1">Noodles</p>
+        <p class="price1">&#8377;100</p>
+        <button class="btn">Order Now</button>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

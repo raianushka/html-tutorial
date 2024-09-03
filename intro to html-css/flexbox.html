@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>flexbox Practice</title>
+</head>
+
+<body style="padding-bottom: 1000px;">
+    <div style="display:flex;
+    flex-direction:row;
+     ">
+        <div style="background-color: lightblue;">div1text</div>
+        <div style="background-color: lightpink;">div2<p>text</p>
+        </div>
+    </div>
+
+    <div style="
+    margin-top:30px;
+    display:flex;
+    flex-direction:row;
+     ">
+        <div style="
+        background-color: lightblue;
+        width:100px;
+        ">div1text</div>
+        <div style="
+        background-color: lightpink;
+        flex:1">flex : 1</div>
+    </div>
+
+    <div style="
+    margin-top:30px;
+    display:flex;
+    flex-direction:row;
+     ">
+        <div style="
+        background-color: lightblue;
+        width:100px;
+        ">100px</div>
+        <div style="
+        background-color: lightpink;
+        flex:1">flex : 1</div>
+        <div style="
+        background-color: lightblue;
+        flex:2;
+        ">flex : 2 </div>
+    </div>
+
+    <div style="
+    margin-top:30px;
+    height:70px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+
+     
+    display:flex;
+    flex-direction:row;
+    justify-content: end;
+     ">
+        <div style="
+        background-color: lightblue;
+        width:100px;
+        ">100px</div>
+        <div style="
+        background-color: lightpink;
+        width: 100px;">100px</div>
+        <div style="
+        background-color: lightblue;
+        width: 100px;
+        ">100px</div>
+    </div>
+
+    <div style="
+    margin-top:30px;
+    height:70px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+
+     
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+     ">
+        <div style="
+        background-color: lightblue;
+        width:100px;
+        ">100px</div>
+        <div style="
+        background-color: lightpink;
+        width: 100px;">100px</div>
+        <div style="
+        background-color: lightblue;
+        width: 100px;
+        ">100px</div>
+    </div>
+
+    <div style="
+    margin-top:30px;
+    height:70px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+
+     
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+     ">
+        <div style="
+        background-color: lightblue;
+        width:100px;
+        ">100px</div>
+        <div style="
+        background-color: lightpink;
+        width: 100px;">100px</div>
+        <div style="
+        background-color: lightblue;
+        width: 100px;
+        ">100px</div>
+    </div>
+    <div style="display:flex;
+margin-top: 25px;">
+        <div style="background-color: lightblue;
+    width: 200px;
+    display:flex;
+    flex-direction: row;
+    ">200px</div>
+
+        <div style="background-color: lightpink;
+width: 75px;
+display:flex;
+flex-direction: row;
+">75px</div>
+    </div>
+
+    <div style="display:flex;
+margin-top: 25px;">
+
+        <div style="background-color: lightblue;
+    width: 50px;
+    display:flex;
+    flex-direction: row;
+    ">item1</div>
+
+        <div style="background-color: lightpink;
+                    display:flex;
+                    flex-direction: row;
+                    flex:1;">item2</div>
+
+        <div style="background-color: lightblue;
+width: 75px;
+display:flex;
+flex-direction: row;
+">item3</div>
+    </div>
+
+
+    <div style="display:flex;
+    justify-content: space-between;
+    margin-top: 25px;">
+    
+            <div style="background-color: lightpink;
+        width: 50px;
+        display:flex;
+        flex-direction: row;
+        ">item1</div>
+    
+            <div style="background-color: lightpink;
+                       width: 50px;
+        display:flex;
+        flex-direction: row;">item2</div>
+    
+            <div style="background-color: lightpink;
+    width: 50px;
+        display:flex;
+        flex-direction: row;
+    ">item3</div>
+
+<div style="background-color: lightpink;
+width: 50px;
+    display:flex;
+    flex-direction: row;
+">item3</div>    
+        </div>
+
+        <div style="
+        height: 50px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: gray;
+        margin-top: 25px;
+        
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;">
+        
+                <div style="background-color: lightpink;
+            width: 50px;
+            display:flex;
+            flex-direction: row;
+            ">item1</div>
+        
+                <div style="background-color: lightpink;
+                           width: 50px;
+            display:flex;
+            flex-direction: row;">item2</div>
+            
+        </div>
+        
+
+     
+        //exercise 12e
+        <div class="container">
+             <div class="flexbox">
+            <p class="text" >Home</p>
+            <p class="notification">14</p>
+        </div>
+        <div class="flexbox">
+             <p class="text">Notifications</p>
+             <p class="notification">3</p>
+        </div>
+        <div class="flexbox">
+            <p class="text">Messages</p>
+            <p class="notification">5</p>
+        </div>
+
+        </div>
+
+
+//Exercise 12f
+       <div class="container2">
+            <div class="first-section">Home</div>
+            <div class="second-section">
+                <input type="text" placeholder="Search" class="search">
+            </div>
+            <div class="third-section">
+                <button class="download">Download</button>
+            </div>
+       </div>
+
+
+       //Exercise 12g
+       <div class="container3">
+        
+        <div class="profile1">
+            <div class="profile-img">
+            <img src="/htmltutuorial/intro to html-css/thumbnails/87930581.webp" alt="image not found" class="image">
+        </div>
+             <div class="profile-info">
+                <p class="name" >Pizza</p>
+                <p class="description">Available</p>
+                <p class="price">$120</p>
+             </div>
+             <div class="btn">
+            <button class="buy">Buy Now</button>
+        </div>
+        </div>
+
+        <div class="profile1">
+            <div class="profile-img">
+            <img src="/htmltutuorial/intro to html-css/thumbnails/chicken-momo-1.jpg" alt="image not found" class="image">
+        </div>
+             <div class="profile-info">
+                <p class="name" >Momos</p>
+                <p class="description">Available</p>
+                <p class="price">$120</p>
+             </div>
+             <div class="btn">
+            <button class="buy">Buy Now</button>
+        </div>
+        </div>
+           
+        <div class="profile1">
+            <div class="profile-img">
+            <img src="/htmltutuorial/intro to html-css/thumbnails/download.jpg" alt="image not found" class="image">
+        </div>
+             <div class="profile-info">
+                <p class="name" >Noodles</p>
+                <p class="description">Available</p>
+                <p class="price">$120</p>
+             </div>
+             <div class="btn">
+            <button class="buy">Buy Now</button>
+        </div>
+        </div>
+
+
+    </div>
+
+    // Exercise: 13a
+    <div style="display: flex;
+    height:50px">
+    <div style="background-color: lightpink;
+    width: 100px; 
+    display: flex;
+    justify-content: center;">
+        <p style="background-color: black; 
+        color: white;">item1</p>
+    </div>
+
+    <div  style="background-color: lightblue;
+    width: 200px;">
+    </div>
+    </div>
+
+    // Exercise: 13b
+    <div style="display: flex;">
+    <div style="background-color: lightpink;
+    width: 100px;"
+    >
+    </div>
+    <div  style="background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;">
+        <p style="margin:0;">row1</p>
+        <div style="
+        margin:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;">
+             <p style="background-color: black;
+             color: white;
+             margin-top: 0;">row2</p>
+             <p style="background-color: black;
+        color: white;
+        margin-top: 0;">row2</p>
+        </div>
+       
+    </div>
+    </div>
+
+    //Exercise 
+
+
+
+
+        <style>
+            *{
+         
+                box-sizing: border-box; 
+                font-family: arial;
+            }
+            .container{
+                border-width:1px;
+        border-color:grey;
+        border-radius: 10px;
+        border-style:solid;
+        font-family:Arial;
+        display:flex;
+        flex-direction: column;
+        padding: 6px 12px;
+        width:300px;
+            }
+            .flexbox{
+                display:flex;
+             justify-content: space-between;
+             align-items: center;
+             height: 40px;
+            }
+            .notification{
+                background-color: rgb(55, 55, 235);
+             margin-right:15px;
+             border:none;
+             border-radius:14px;
+             text-align:center;
+             color:white;
+             font-weight: 800px;
+             padding:5px 12px;
+            }
+
+            .container2{
+                background-color: purple;
+                width:100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px;
+                font-family: Arial;
+                overflow: hidden;
+            }
+            .first-section{
+                 color: white;
+                 font-weight:600;
+                 /* margin-left: 10px; */
+
+            }
+            .second-section{
+                display: flex;
+                flex:1;
+                justify-content: center;
+                overflow:hidden;
+            }
+            .search{
+                width:100%;
+                margin: 2px 70px;
+                padding: 10px;
+                border-radius: 20px;
+                border:none;
+            }
+            .third-section{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .download{
+                /* margin-right: 10px; */
+                background-color:transparent;
+                border-color: white;
+                border-style: solid;
+                border-radius: 5px;
+                padding:10px;
+                color:white;
+                font-weight: 600;
+            }
+
+            .container3{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10PX;
+            }
+            .profile1{
+                display: flex;
+                margin-top: 15px;
+            }
+            .profile-img{
+                width:75px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+            }
+            .image{
+                width:65px;
+                height:65px;
+                border-radius: 100px;
+            }
+            .profile-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin:0px;
+                margin-right: 70px;
+                font-size: 15px;
+            }
+            .name{
+                margin: 0px;
+                font-weight: 600;
+            }
+            .price{
+                margin:0px;
+                color:gray;
+                font-size: 12px;
+            }
+            .description{
+                margin:0;
+                color: gray;
+                font-size: 15px;
+            }
+            .btn{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .buy{
+                border: none;
+                padding:10px;
+                border-radius: 5px;
+                background-color: rgb(233, 213, 128);
+                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+            }
+            
+            
+        </style>
+
+
+
+       
+
+      
+
+</body>
+
+</html>

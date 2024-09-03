@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css" rel="stylesheet" />
+<style>
+    .error {
+        color: red;
+        border: 1px solid red;
+        box-shadow: 0px 0px 10px red;
+        height: max-content;
+
+    }
+
+    .success {
+        color: green;
+        border: 1px solid green;
+        box-shadow: 0px 0px 10px green;
+        height: max-content;
+
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikchar</title>
+</head>
+
+<body>
+    <script src='jquery-3.6.0.min.js'></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
+    <script>
+        let name;
+        let password;
+        let namel;
+        let passwordl;
+        let show;
+        var check = {}
+        var arr = []
+
+        const gett = () => {
+            name = document.getElementById("form3Example1c");
+            password = document.getElementById("form3Example4c");
+            email = document.getElementById("form3Example3c");
+            mobile = document.getElementById("mobilenumber");
+            password2 = document.getElementById("form3Example4cd");
+
+            namel = name.value;
+            passwordl = password.value;
+            emaill = email.value;
+            mobilel = mobile.value;
+            password2l = password2.value;
+
+            if (namel.length > 2) {
+                name.classList.add("success");
+                name.classList.remove("error");
+                check.namel = true
+
+            } else {
+                name.classList.add("error");
+                name.classList.remove("success");
+                check.namel = false
+            }
+
+            if (passwordl.length > 2 && passwordl == password2l) {
+                password.classList.add("success");
+                password.classList.remove("error");
+                check.passwordl = true
+
+            } else {
+                password.classList.add("error");
+                password.classList.remove("success");
+                check.passwordl = false
+            }
+
+            if (mobilel.length > 9) {
+                mobile.classList.add("success");
+                mobile.classList.remove("error");
+                check.mobilel = true
+
+            } else {
+                mobile.classList.add("error");
+                mobile.classList.remove("success");
+                check.mobilel = false
+            }
+
+            if (emaill.includes("@")) {
+                email.classList.add("success");
+                email.classList.remove("error");
+                check.emaill = true
+
+            } else {
+                email.classList.add("error");
+                email.classList.remove("success");
+                check.emaill = false
+            }
+
+
+            if (password2l.length > 2 && passwordl == password2l) {
+                password2.classList.add("success");
+                password2.classList.remove("error");
+                check.passwordl = true
+
+            } else {
+                password2.classList.remove("success");
+                password2.classList.add("error");
+                check.passwordl = false
+
+            }
+            submmit()
+        }
+
+        const submmit = () => {
+
+            if (!JSON.stringify(check).includes("false")) {
+                console.log("you are registered!");
+                var obj = {}
+                obj['name'] = namel
+                obj['email'] = emaill
+                obj['mobile'] = mobilel
+                obj['password'] = passwordl
+
+                arr.push(obj)
+                localStorage.setItem("users", JSON.stringify(arr))
+
+            } else {
+                console.log("wrong format");
+
+            }
+
+        }
+        const login = () => {
+            let user = document.getElementById("loginname").value
+            let pass = document.getElementById("loginpass").value
+            var data = localStorage.getItem("users")
+            var obj = JSON.parse(data)
+            let useer = document.getElementById("loginpass")
+            for (const x in obj) {
+                if(obj[x].name==user && obj[x].password== pass){
+                    console.log("login successful!")
+                    useer.classList.add("success")
+                    $("#loginpass").css("success")
+                    $("#imagelogin").attr("src","https://thumbs.dreamstime.com/b/welcome-back-banner-blue-typography-abstract-pink-blot-creative-design-element-symbol-decorative-badge-quote-tag-184010149.jpg")
+                    return
+                }else{
+                    console.log("login failed!")
+                    useer.classList.add("error")
+                    return
+                }
+             
+            }
+            
+
+
+        }
+    </script>
+    <section class="vh-100" style="background-color: #eee;">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                    <div class="card text-black" style="border-radius: 25px;">
+                        <div class="card-body p-md-5">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Register </p>
+
+                                    <form class="mx-1 mx-md-4">
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="text" id="form3Example1c" class="form-control" />
+                                                <label class="form-label" for="form3Example1c">Your Name</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="email" id="form3Example3c" class="form-control" />
+                                                <label class="form-label" for="form3Example3c">Your Email</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-mobile fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="text" id="mobilenumber" class="form-control" />
+                                                <label class="form-label" for="mobilenumber">Your Mobile</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="password" id="form3Example4c" class="form-control" />
+                                                <label class="form-label" for="form3Example4c">Password</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="password" id="form3Example4cd" class="form-control" />
+                                                <label class="form-label" for="form3Example4cd">Repeat your
+                                                    password</label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                            <button type="button" class="btn btn-primary btn-lg"
+                                                onclick="gett()">Register</button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                                        class="img-fluid" alt="Sample image">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #eee;">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                    <div class="card text-black" style="border-radius: 25px;">
+                        <div class="card-body p-md-5">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Login </p>
+
+                                    <form class="mx-1 mx-md-4">
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="text" id="loginname" class="form-control" />
+                                                <label class="form-label" for="loginname">Your Name</label>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="text" id="loginpass" class="form-control" />
+                                                <label class="form-label" for="loginpass">Your password</label>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                            <button type="button" class="btn btn-primary btn-lg"
+                                                onclick="login()">Login</button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                                    <img src="https://media.istockphoto.com/vectors/transparent-colored-smoke-cloud-vector-id1322022891?k=20&m=1322022891&s=612x612&w=0&h=JyMhYHsdwBYaEOgTFGkLEBxEN4GRpaf8FCQ-mwLtys0=" id="imagelogin"
+                                        class="img-fluid" alt="Sample image">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta char="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Register/Login</title>
+    </head>
+
+<style>
+    .error{
+    color:red;
+    border:1px solid red;
+    box-shadow: 0px 0px 10px red;
+    }
+    .success
+    {
+        color:green;
+        border:1px solid green;
+        box-shadow: 0px 0px 10px green;
+    }
+
+    </style>
+<body >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script> src="jquery-3.6.0.min.js"</script>
+<script>
+    var check={}
+    var arr=[]
+    
+    const name_info=()=>{
+         let name= document.getElementById("name").value
+         if(name.length < 1)
+         {
+            document.getElementById("name").classList.add('error')
+            document.getElementById("name").classList.remove('success')
+            console.log("Enter valid name");
+            check.name=false;
+         }
+         else{
+            document.getElementById("name").classList.add('success')
+            document.getElementById("name").classList.remove('error')
+            console.log(name)
+            check.name=true;
+         }
+    }
+    const pnumbe_r=()=>{
+        let pnumber= document.getElementById("pnumber").value
+
+        if(pnumber.length==10)
+        {
+            document.getElementById("pnumber").classList.add('success')
+            document.getElementById("pnumber").classList.remove('error')
+          console.log(pnumber)
+          check.pnumber=true;
+        }
+        else{
+            
+            document.getElementById("pnumber").classList.add('error')
+            document.getElementById("pnumber").classList.remove('success')
+              
+            console.log("Enter valid phone number");
+          check.pnumber=false;
+        }
+        
+    }
+
+    const emai_l=()=>
+    {
+        let email= document.getElementById("email").value
+        if( email.length>0 && email.length<50  && email.includes("@gmail.com"))
+        {
+            console.log(email)
+            document.getElementById("email").classList.add('success')
+            document.getElementById("email").classList.remove('error')
+            check.email=true;
+        }
+        else{
+            document.getElementById("email").classList.add('error')
+            document.getElementById("email").classList.remove('success')
+            console.log("Enter a valid email");
+        check.email=false;
+        }
+    }
+    const pass_d=()=>{
+         let pwd= document.getElementById("pwd").value
+         // && pwd.includes('!' || '@' || '#' || '$' || '%' || '^' || '&' || '*')
+         if(pwd.length>8 && pwd.length<20){
+            console.log(pwd)
+            document.getElementById("pwd").classList.add('success')
+            document.getElementById("pwd").classList.remove('error')
+             check.pwd=true;
+        }
+         else
+         {
+            document.getElementById("pwd").classList.add('error')
+            document.getElementById("pwd").classList.remove('success')
+            console.log("your password must contain 8 digits")
+        check.pwd=false; 
+        }
+
+    
+    
+         let p2= document.getElementById("p2").value
+         if(p2==pwd){
+            console.log("Password created Successfully")
+            document.getElementById("p2").classList.add('success')
+            document.getElementById("p2").classList.remove('error')
+        check.p2=true
+        }
+         else
+         {
+            document.getElementById("p2").classList.add('error')
+            document.getElementById("p2").classList.remove('success')
+            console.log("Passwords are not same")
+        check.p2=false
+         }
+checking()
+    }
+
+    const checking=()=>
+    {
+        if(JSON.stringify(check).includes("true"))
+        {
+            console.log("Congratulations! You are registered.")
+            var obj={}
+            obj['name']=document.getElementById('name').value
+            obj['email']=document.getElementById('email').value
+            obj['mobile']=document.getElementById('pnumber').value
+            obj['password']=document.getElementById('pwd').value
+            
+
+            arr.push(obj)
+            localStorage.setItem("users", JSON.stringify(arr))
+        }
+        else{
+            console.log("wrong format")
+        }
+
+    }
+
+</script>
+
+
+
+                 <i class="material-icons" >account_box</i>  
+                 <label>Your name</label>
+                  <input style="border-radius: 5px; text-align: center;width: 200px; " type='text' id='name' placeholder="Input your name"/> <br>
+        
+                  <i class="material-icons" >phone</i>
+                     <label class="form-label" for="pnumber"><b>Phone number</b></label> <input style="border-radius: 5px; text-align:center;width: 200px;" type='text' id='pnumber' placeholder="Input your phone number"/> <br>
+                
+                      <i class="material-icons" >email</i> 
+                      <label class="form-label" for="email"><b>Email</b></label><input style="border-radius: 5px; text-align:center; width: 200px;" type='text' id='email' placeholder="Input your Email Id"/><br>
+          
+                    <i class="material-icons" >vpn_key</i> 
+                          <label class="form-label"for="pwd"><b>Password</b></label><input style="border-radius: 5px; text-align:center;width:200px" type="text" id='pwd' placeholder="Create"/><br>
+                
+                
+                    <i class="material-icons" >vpn_key</i> 
+                        <label class="form-label" for="p2"><b>Repeat password</b></label><input style="border-radius: 5px; text-align:center;width:200px;" type="text" id="p2" placeholder="Confirm " /><br>
+             
+               
+              <input  type="button" value="Register" id="register"onclick="name_info(),pnumbe_r(),emai_l(),pass_d()"/>
+            
+
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<script>
+function prn(message)
+{
+console.log(message)
+}
+function squ(n,f)
+{
+const s= n*n;
+f(s)
+}
+let num= 5;
+let result
+setTimeout(()=>
+{
+result= squ(num,prn)
+},3000)
+
+//or let num=5;
+//let time=3000
+//const func=()=>{
+//squ(num,prn)
+//}
+//setTimeout(func,time)
+
+
+
+
+</script>

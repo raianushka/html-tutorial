@@ -1,0 +1,66 @@
+a{
+    margin:10px 1px 1px 10px;
+    cursor:pointer;
+   }
+   .back{
+    cursor:pointer;
+    padding:7px 5px 7px 5px;
+   }
+   .next{
+    cursor:pointer;
+    padding:7px 5px 7px 5px;
+    margin-left: 10px;
+   }
+   .stretch{
+    cursor:pointer;
+    background-color:green;
+    padding:5px 5px 5px 5px;
+    transition: font-size 2s, padding 2s;
+   }
+   .stretch:hover{
+    padding: 20px 20px 20px 20px;
+    font-size:20px;
+   }
+   .shadow{
+    cursor:pointer;
+    padding: 20px 20px 20px 20px;
+    background-color:orange;
+    box-shadow: 5px 5px 5px rgba(58, 58, 58, 0.795);
+    transition:box-shadow 0.15s;
+   }
+   .shadow:active{
+   box-shadow: none;
+   }
+   .o{
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+    background-color:blueviolet;
+    color:white;
+    cursor:pointer;
+   }
+   .o:hover{
+    margin: 5px 2px 5px 2px;
+    padding: 10px 20px 10px 20px;
+   }
+   .t{
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+    background-color:blueviolet;
+    color:white;
+    cursor:pointer;
+   }
+   .t:hover{
+    margin: 5px 2px 5px 2px;
+    padding: 10px 20px 10px 20px;
+   }
+   .th{
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+    background-color:blueviolet;
+    color:white;
+    cursor:pointer;
+   }
+   .th:hover{
+    margin: 5px 2px 5px 2px;
+    padding: 10px 20px 10px 20px;
+   }

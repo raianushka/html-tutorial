@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,intiial-scale=1">
+    
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        .box {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+
+        }
+
+        .circle {
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            border: none;
+            border-radius: 50px;
+        }
+
+        .satisfied {
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+            padding-bottom: 15px;
+            padding-left: 10px;
+            width: 300px;
+        }
+
+        .youtubemusic {
+            width: 380px;
+            background-color: rgb(33, 33, 33);
+            padding: 0.5px 10px 5px 15px;
+        }
+
+        .ytinstall {
+            color: white;
+            font-size: 21px;
+            font-weight: bold
+        }
+
+        .des {
+            color: rgb(95, 91, 91);
+        }
+
+        .profile {
+            border-radius: 100%;
+            height: 30px;
+            width: 30px;
+            object-position: center;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+
+        .think {
+            border: none;
+            font-family: Arial;
+            vertical-align: middle;
+            font-size: 15px;
+        }
+
+        .tweet {
+            background-color: rgb(0, 136, 255);
+            color: white;
+            border-radius: 20px;
+            padding: 8px 12px 8px 12px;
+            border: none;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        .twitter {
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+            padding-left: 10px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+
+        .container {
+            font-family: Arial;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+            width: 200px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        .title {
+            margin-top: 2px;
+            margin-bottom: 0px;
+            margin-left: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .price {
+            margin-top: 0px;
+            margin-left: 5px;
+            font-size: 15px;
+        }
+
+        .btn {
+            margin-left: 5px;
+            margin-bottom: 5px;
+            background-color: rgb(132, 76, 185);
+            border: none;
+            border-radius: 5px;
+            color: rgb(254, 254, 254);
+            padding: 5px 5px 5px 5px;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+        }
+
+        .img {
+            width: 200px;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        #gif {
+            width: 272px;
+        }
+
+        #search {
+            border:none;
+            border-radius: 20px;
+            width: 500px;
+            padding: 10px 10px 10px 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+            margin: 10px 0px 10px 0px;
+            box-sizing: border-box; 
+        }
+
+        .btn1 {
+            margin-top: 30px;
+            padding: 10px 8px 10px 8px;
+        }
+
+        .Google {
+             display: flex;
+             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            min-width: fit-content;
+        }
+    </style>
+    <title>Exercise 9 - The div Element</title>
+</head>
+
+<body>
+   
+    <p>9a.</p> 
+        <div class="box"></div>
+        <p>9b.</p>
+        <div class="circle"></div>
+        <p>9c.</p> 
+    <div class="satisfied">
+        <p>Satisfied with our service?</p>
+        <button>Yes</button>
+        <button>No</button>
+    </div>
+    <p>9d.</p>
+    <div class="youtubemusic">
+        <p class="ytinstall">Install YouTube Music</p>
+        <p class="des">Add YouTube Music to your desktop for quick and easy access</p>
+    </div>
+    <p>9e.</p>
+    <div class="twitter">
+
+        <img src="thumbnails/OIP.jpg" class="profile">
+        <input class="think" placeholder="What's happening?">
+        <button class="tweet">Tweet</button>
+    </div>
+    <p>9f.</p>
+    <div class="order">
+        <div class="container">
+            <img src="thumbnails/87930581.webp" class="img">
+            <p class="title">Pizza</p>
+            <p class="price">&#8377;120</p>
+            <button class="btn">Order Now</button>
+        </div>
+        <div class="container">
+            <img src="thumbnails/chicken-momo-1.jpg" class="img">
+            <p class="title">Momos</p>
+            <p class="price">&#8377;90</p>
+            <button class="btn">Order Now</button>
+        </div>
+        <div class="container">
+            <img src="thumbnails/download.jpg" class="img">
+            <p class="title">Noodles</p>
+            <p class="price">&#8377;100</p>
+            <button class="btn">Order Now</button>
+
+        </div>
+    </div>
+
+
+    <p>9h.</p> 
+    <div class="Google">
+        <img src="thumbnails\google.gif" id="gif">
+        <input type="textbox" id="search" placeholder="Search Google or type a URL">
+        <div>
+        <button class="btn1"> Google Search</button>
+        <button class="btn1">I'm Feeling Lucky</button>
+        </div>
+    </div>
+</body>
+
+</html>

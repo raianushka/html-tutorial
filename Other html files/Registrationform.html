@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Registration form</title>
+</head>
+    <body>
+        
+           
+                    <form id="register" class="input-group-register">
+                        <input type="text" class="input-field" placeholder="Name" id="name"required>
+                        <input type="text" class="input-field" placeholder="Phone number" id="pnumber">
+                        <input type="email" class="input-field" placeholder="Email ID" id="email"required>
+                        <input type="password" class="input-field" placeholder="Create a Password" id="pwd"required>
+                       
+                       
+                        <button type="submit" class="submit-btn" onclick="name_info(),pnumbe_r(),emai_l(),pass_d()">Register</button>
+                    </form>
+                    
+                
+      
+      
+
+<script>
+    var check={}
+    var arr=[]
+    
+    const name_info=()=>{
+         let name= document.getElementById("name").value
+         if(name.length < 1)
+         {
+            document.getElementById("name").classList.add('error')
+            document.getElementById("name").classList.remove('success')
+            console.log("Enter valid name");
+            check.name=false;
+         }
+         else{
+            document.getElementById("name").classList.add('success')
+            document.getElementById("name").classList.remove('error')
+            console.log(name)
+            check.name=true;
+         }
+    }
+    const pnumbe_r=()=>{
+        let pnumber= document.getElementById("pnumber").value
+
+        if(pnumber.length==10)
+        {
+            document.getElementById("pnumber").classList.add('success')
+            document.getElementById("pnumber").classList.remove('error')
+          console.log(pnumber)
+          check.pnumber=true;
+        }
+        else{
+            
+            document.getElementById("pnumber").classList.add('error')
+            document.getElementById("pnumber").classList.remove('success')
+              
+            console.log("Enter valid phone number");
+          check.pnumber=false;
+        }
+        
+    }
+
+    const emai_l=()=>
+    {
+        let email= document.getElementById("email").value
+        if( email.length>0 && email.length<50)
+        {
+            console.log(email)
+            document.getElementById("email").classList.add('success')
+            document.getElementById("email").classList.remove('error')
+            check.email=true;
+        }
+        else{
+            document.getElementById("email").classList.add('error')
+            document.getElementById("email").classList.remove('success')
+            console.log("Enter a valid email");
+        check.email=false;
+        }
+    }
+    const pass_d=()=>{
+         let pwd= document.getElementById("pwd").value
+         if(pwd.length>8 && pwd.length<20){
+            console.log(pwd)
+            document.getElementById("pwd").classList.add('success')
+            document.getElementById("pwd").classList.remove('error')
+             check.pwd=true;
+        }
+         else
+         {
+            document.getElementById("pwd").classList.add('error')
+            document.getElementById("pwd").classList.remove('success')
+            console.log("your password must contain 8 digits")
+        check.pwd=false; 
+        }
+
+    
+    
+       
+checking()
+    }
+
+    const checking=()=>
+    {
+        if(JSON.stringify(check).includes("true"))
+        {
+            console.log("Congratulations! You are registered.")
+            var obj={}
+            obj['name']=document.getElementById('name').value
+            obj['email']=document.getElementById('email').value
+            obj['mobile']=document.getElementById('pnumber').value
+            obj['password']=document.getElementById('pwd').value
+            
+
+            arr.push(obj)
+            localStorage.setItem("users", JSON.stringify(arr))
+            console.log(localStorage.length);
+        }
+        else{
+            console.log("wrong format")
+        }
+
+    }
+
+
+
+</script>
+
+
+<style>
+
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.input-group-register{
+    top:120px;
+    position: absolute;
+    width:280px;
+   
+}
+
+
+
+.submit-btn
+{
+    width:85%;
+    padding:10px 30px;
+    cursor:pointer;
+    display:block;
+    margin:auto;
+    background:#f3c693;
+    border:0;
+    outline:none;
+    border-radius: 30px;
+}
+
+.check-box{
+    margin:30px 10px 34px 0;
+}
+
+
+
+#register{
+    left:450px;
+}
+
+#register input{
+    color:rgb(3, 3, 3);
+    font-size:15;
+}
+
+.error{
+    color:red;
+    border:1px solid red;
+    box-shadow: 0px 0px 10px red;
+    }
+    .success
+    {
+        color:green;
+        border:1px solid green;
+        box-shadow: 0px 0px 10px green;
+    }
+
+    </style>
+
+
+
+    </body>
+
+</html>
